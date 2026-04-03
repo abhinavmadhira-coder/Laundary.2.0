@@ -1,0 +1,73 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background: linear-gradient(to bottom, #a8dadc, #457b9d, #1d3557);
+  color: #fff;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+.banner {
+  background: #1d3557;
+  padding: 20px;
+}
+
+.banner h1 {
+  color: #f1faee;
+}
+
+section {
+  margin: 30px auto;
+  padding: 20px;
+  width: 70%;
+  background: #f1faee;
+  color: #222;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+}
+
+input, select, button {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background: #457b9d;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1d3557;
+}
+
+/* Bubble animation */
+body::before {
+  content: "";
+  position: fixed;
+  top: -100px;
+  left: -100px;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.2) 20%, transparent 20%);
+  background-size: 50px 50px;
+  animation: bubbles 20s linear infinite;
+  z-index: -1;
+}
+
+@keyframes bubbles {
+  from { transform: translateY(0); }
+  to { transform: translateY(-200px); }
+}
+
+.record-card {
+  display: inline-block;
+  margin: 15px;
+  padding: 15px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
