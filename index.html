@@ -2,30 +2,39 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Laundry Hub Login</title>
+  <title>Admin Portal</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js"></script>
 </head>
 <body>
   <header class="banner">
-    <h1>🧺 Hostel Laundry Hub</h1>
-    <p>Login to your portal</p>
+    <h1>🧑‍🔧 Admin Laundry Portal</h1>
   </header>
 
   <main>
-    <section>
-      <h2>Student Login</h2>
-      <input type="text" id="studentUser" placeholder="Username">
-      <input type="password" id="studentPass" placeholder="Password">
-      <button onclick="studentLogin()">Login</button>
-      <p>New student? <a href="register.html">Sign up here</a></p>
+    <section id="admin">
+      <h2>Upload Laundry Record</h2>
+      <input type="file" id="laundryPic" accept="image/*">
+      <input type="text" id="roomRange" placeholder="Room range (e.g. 405-625)">
+      <input type="number" id="tagNumber" placeholder="Tag Number">
+      <select id="shelfNumber">
+        <option value="1">Shelf 1</option>
+        <option value="2">Shelf 2</option>
+        <option value="3">Shelf 3</option>
+        <option value="4">Shelf 4</option>
+        <option value="5">Shelf 5</option>
+      </select>
+      <select id="statusSelect">
+        <option value="Submitted">Submitted</option>
+        <option value="Processing">Processing</option>
+        <option value="Completed">Completed</option>
+      </select>
+      <button onclick="updateStatus()">Save Record</button>
     </section>
 
-    <section>
-      <h2>Admin Login</h2>
-      <input type="text" id="adminUser" placeholder="Username">
-      <input type="password" id="adminPass" placeholder="Password">
-      <button onclick="adminLogin()">Login</button>
+    <section id="records">
+      <h2>All Laundry Records</h2>
+      <div id="recordList"></div>
     </section>
   </main>
 </body>
